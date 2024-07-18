@@ -8,6 +8,6 @@ import java.util.List;
 public interface CharacterRepository extends JpaRepository<Character, Long> {
 
     Character findByName(String name);
-    List<Character> findByNameContaining(String name);
+    List<Character> findByNameContainingIgnoreCase(String name);
     void deleteByName(String name);
 }

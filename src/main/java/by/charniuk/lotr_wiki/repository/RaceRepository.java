@@ -8,6 +8,6 @@ import java.util.List;
 public interface RaceRepository extends JpaRepository<Race, Long> {
 
     Race findByName(String name);
-    List<Race> findByNameContaining(String name);
+    List<Race> findByNameContainingIgnoreCase(String name);
     void deleteByName(String name);
 }

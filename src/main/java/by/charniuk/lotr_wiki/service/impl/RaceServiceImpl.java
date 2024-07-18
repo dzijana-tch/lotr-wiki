@@ -31,7 +31,7 @@ public class RaceServiceImpl implements RaceService {
 
     @Override
     public List<Race> searchByName(String name) {
-        return raceRepository.findByNameContaining(name);
+        return raceRepository.findByNameContainingIgnoreCase(name);
     }
 
     @Override

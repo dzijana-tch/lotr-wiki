@@ -1,12 +1,14 @@
 package by.charniuk.lotr_wiki.service;
 
+import by.charniuk.lotr_wiki.model.Character;
+
 import java.util.List;
 
 public interface CharacterService {
 
-    String addCharacter(Character character);
+    boolean addCharacter(Character character);
     List<Character> getAllCharacters();
     List<Character> searchByName(String name);
-    Character editCharacter(Character character);
-    String remove(Character character);
+    boolean editCharacter(Character character);
+    boolean removeCharacter(String name);
 }

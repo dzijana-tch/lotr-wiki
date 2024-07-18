@@ -1,6 +1,7 @@
 package by.charniuk.lotr_wiki.controller.impl;
 
 import by.charniuk.lotr_wiki.controller.CharacterController;
+import by.charniuk.lotr_wiki.model.Character;
 import by.charniuk.lotr_wiki.service.CharacterService;
 import lombok.AllArgsConstructor;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,7 +16,10 @@ public class CharacterControllerImpl implements CharacterController {
 
     @Override
     public String addCharacter(Character character) {
-        return characterService.addCharacter(character);
+        if (characterService.addCharacter(character)) {
+            return "Character is added successfully";
+        }
+        return "Character already exists";
     }
 
     @Override
@@ -29,12 +33,18 @@ public class CharacterControllerImpl implements CharacterController {
     }
 
     @Override
-    public Character editCharacter(Character character) {
-        return characterService.editCharacter(character);
+    public String editCharacter(Character character) {
+        if (characterService.editCharacter(character)) {
+            return "Character is changed successfully";
+        }
+        return "Character is not found";
     }
 
     @Override
-    public String remove(Character character) {
-        return characterService.remove(character);
+    public String removeCharacter(String name) {
+        if (characterService.removeCharacter(name)) {
+            return "Character is removed successfully";
+        }
+        return "Character is not found";
     }
 }

@@ -6,9 +6,9 @@ import java.util.List;
 
 public interface RaceService {
 
-    String addRace(Race race);
+    boolean addRace(Race race);
     List<Race> getAllRace();
     List<Race> searchByName(String name);
-    Race editRace(Race race);
-    String remove(Race race);
+    boolean editRace(Race race);
+    boolean removeRace(String name);
 }

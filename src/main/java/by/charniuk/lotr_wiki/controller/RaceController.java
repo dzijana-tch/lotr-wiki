@@ -9,6 +9,6 @@ public interface RaceController {
     String addRace(Race race);
     List<Race> getAllRace();
     List<Race> searchByName(String name);
-    Race editRace(Race race);
-    String remove(Race race);
+    String editRace(Race race);
+    String removeRace(String name);
 }

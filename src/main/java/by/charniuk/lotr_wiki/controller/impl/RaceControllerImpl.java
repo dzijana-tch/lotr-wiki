@@ -16,7 +16,10 @@ public class RaceControllerImpl implements RaceController {
 
     @Override
     public String addRace(Race race) {
-        return raceService.addRace(race);
+        if (raceService.addRace(race)) {
+            return "Race is added successfully";
+        }
+        return "Race already exists";
     }
 
     @Override
@@ -30,12 +33,17 @@ public class RaceControllerImpl implements RaceController {
     }
 
     @Override
-    public Race editRace(Race race) {
-        return raceService.editRace(race);
+    public String editRace(Race race) {
+        if (raceService.editRace(race)) {
+            return "Race is changed successfully";
+        }
+        return "Race is not found";
     }
 
     @Override
-    public String remove(Race race) {
-        return raceService.remove(race);
-    }
+    public String removeRace(String name) {
+        if (raceService.removeRace(name)) {
+            return "Race is removed successfully";
+        }
+        return "Race is not found";        }
 }

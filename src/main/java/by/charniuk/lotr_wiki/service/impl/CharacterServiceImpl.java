@@ -1,9 +1,11 @@
 package by.charniuk.lotr_wiki.service.impl;
 
 import by.charniuk.lotr_wiki.service.CharacterService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class CharacterServiceImpl implements CharacterService {
     @Override
     public String addCharacter(Character character) {

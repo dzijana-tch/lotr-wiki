@@ -2,9 +2,11 @@ package by.charniuk.lotr_wiki.service.impl;
 
 import by.charniuk.lotr_wiki.model.Race;
 import by.charniuk.lotr_wiki.service.RaceService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class RaceServiceImpl implements RaceService {
     @Override
     public String addRace(Race race) {

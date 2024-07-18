@@ -1,0 +1,692 @@
+{
+	"info": {
+		"_postman_id": "0194cf9f-26fb-43ab-b456-cb9f31ed6ba9",
+		"name": "LOTRWiki",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "34067496"
+	},
+	"item": [
+		{
+			"name": "Race",
+			"item": [
+				{
+					"name": "Post 4 races",
+					"item": [
+						{
+							"name": "Post 1st race",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Гном\",\r\n    \"appearance\": \"Низкорослые и коренастые; грудь широкая, руки – сильные, ноги – крепкие\",\r\n    \"height\": \"120—150 см\",\r\n    \"lifespan\": \"250—300 лет\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/races/add",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"races",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post 2nd race",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Эльф\",\r\n    \"appearance\": \"Похожи на людей\",\r\n    \"height\": \"180 см\",\r\n    \"lifespan\": \"Бессмертны\" \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/races/add",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"races",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post 3rd race",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Человек\",\r\n    \"appearance\": \"Похожи на эльфов, но уступают в красоте и силе\",\r\n    \"height\": \"до 200 см\",\r\n    \"lifespan\": \"80—150 лет\" \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/races/add",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"races",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post 4th race",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Хоббит\",\r\n    \"appearance\": \"Маленькие и незаметные\",\r\n    \"height\": \"Около 120 см\",\r\n    \"lifespan\": \"Около 120 лет\" \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/races/add",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"races",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post dublicate",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Хоббит\",\r\n    \"appearance\": \"Маленькие и незаметные,\",\r\n    \"height\": \"Около 120 см\",\r\n    \"lifespan\": \"Около 120 лет\" \r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/races/add",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"races",
+										"add"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get all races",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/races",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"races"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/races/search/хоб",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"races",
+								"search",
+								"хоб"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update race",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Эльф\",\r\n    \"appearance\": \"Эльфы похожи на людей, но намного превосходят их красотой. Белокожие, с острыми ушами\",\r\n    \"height\": \"180—240 см\",\r\n    \"lifespan\": \"Бессмертны\" \r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/races/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"races",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete race",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/races/remove/Гном",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"races",
+								"remove",
+								"Гном"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all races",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/races",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"races"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update non-existent race",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Гном\",\r\n    \"appearance\": \"Низкорослые и коренастые; грудь широкая, руки – сильные, ноги – крепкие, а бороды – длинные\",\r\n    \"height\": \"120—150 см\",\r\n    \"lifespan\": \"250—300 лет\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/races/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"races",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete non-existent race",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/races/remove/Волшебник",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"races",
+								"remove",
+								"Волшебник"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Character",
+			"item": [
+				{
+					"name": "Post 5 characters",
+					"item": [
+						{
+							"name": "Post 1st character",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Арагорн\",\r\n    \"title\": \"Вождь Дунэдайн Севера, Наследник Исильдура, Верхоный король Гондора и Арнора\",\r\n    \"race\": {\r\n    \"name\": \"Человек\",\r\n    \"appearance\": \"Похожи на эльфов, но уступают в красоте и силе\",\r\n    \"height\": \"до 200 см\",\r\n    \"lifespan\": \"80—150 лет\" \r\n}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/characters/add",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"characters",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post 2nd character",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Фродо Бэггинс\",\r\n    \"title\": \"Хранитель Кольца\",\r\n    \"race\": {\r\n    \"name\": \"Хоббит\",\r\n    \"appearance\": \"Маленькие и незаметные\",\r\n    \"height\": \"Около 120 см\",\r\n    \"lifespan\": \"Около 120 лет\" \r\n}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/characters/add",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"characters",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post 3rd character",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Сэмуайз Гэмджи\",\r\n    \"title\": \"Мэр Мичел Делвинга\",\r\n    \"race\": {\r\n    \"name\": \"Хоббит\",\r\n    \"appearance\": \"Маленькие и незаметные\",\r\n    \"height\": \"Около 120 см\",\r\n    \"lifespan\": \"Около 120 лет\" \r\n}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/characters/add",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"characters",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post 4th character",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Леголас\",\r\n    \"title\": \"Принц Лесного Королевства\",\r\n    \"race\": {\r\n    \"name\": \"Эльф\",\r\n    \"appearance\": \"Похожи на людей\",\r\n    \"height\": \"180 см\",\r\n    \"lifespan\": \"Бессмертны\" \r\n}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/characters/add",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"characters",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post 5th character",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Эльронд\",\r\n    \"title\": \"Лорд Ривенделла\",\r\n    \"race\": {\r\n    \"name\": \"Эльф\",\r\n    \"appearance\": \"Похожи на людей\",\r\n    \"height\": \"180 см\",\r\n    \"lifespan\": \"Бессмертны\" \r\n}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/characters/add",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"characters",
+										"add"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Post dublicate",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"name\": \"Леголас\",\r\n    \"title\": \"Принц Лесного Королевства\",\r\n    \"race\": {\r\n    \"name\": \"Эльф\",\r\n    \"appearance\": \"Похожи на людей\",\r\n    \"height\": \"180 см\",\r\n    \"lifespan\": \"Бессмертны\" \r\n}\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:8080/api/v1/characters/add",
+									"host": [
+										"localhost"
+									],
+									"port": "8080",
+									"path": [
+										"api",
+										"v1",
+										"characters",
+										"add"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Get all characters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/characters",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"characters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search by name",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/characters/search/эльр",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"characters",
+								"search",
+								"эльр"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update character",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Фродо Бэггинс\",\r\n    \"title\": \"Хранитель Кольца, Друг Эльфов, Заместитель мэра Мичел Делвинга\",\r\n    \"race\": {\r\n    \"name\": \"Хоббит\",\r\n    \"appearance\": \"Маленькие и незаметные\",\r\n    \"height\": \"Около 120 см\",\r\n    \"lifespan\": \"Около 120 лет\" \r\n}\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/characters/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"characters",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete character",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/characters/remove/Леголас",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"characters",
+								"remove",
+								"Леголас"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get all characters",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/characters",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"characters"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update non-existent character",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Леголас\",\r\n    \"title\": \"Принц Лесного Королевства\",\r\n    \"race\": \"Эльф\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:8080/api/v1/races/update",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"races",
+								"update"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete non-existent character",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "localhost:8080/api/v1/races/remove/Бильбо",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"v1",
+								"races",
+								"remove",
+								"Бильбо"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
